@@ -1,4 +1,5 @@
 import { Component } from '../core/core';
+import aboutStore from '../store/aboutStore';
 
 export default class Header extends Component {
   constructor() {
@@ -12,7 +13,7 @@ export default class Header extends Component {
           },
           {
             name: 'Movie',
-            href: '#/movie?id=tt18687124',
+            href: '#/movie?id=tt1605783',
           },
           {
             name: 'About',
@@ -29,6 +30,7 @@ export default class Header extends Component {
   }
 
   render() {
+    const { avatar } = aboutStore.state;
     this.el.innerHTML = /** html */ `
       <a href="#/" class="logo"><span>OMDbAPI</span>.COM</a>
       <nav>
@@ -49,7 +51,7 @@ export default class Header extends Component {
         </ul>
       </nav>
       <a href="#/about" class="user">
-        <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1598028330/noticon/vxemnmgycuqt416dsayz.png" alt="user" />
+        <img src="${avatar}" alt="avatar" />
       </a>
     `;
   }
