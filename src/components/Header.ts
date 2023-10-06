@@ -1,7 +1,14 @@
 import { Component } from '../core/core';
 import aboutStore from '../store/aboutStore';
 
+interface State {
+  [key: string]: unknown;
+  menus: { name: string; href: string }[];
+}
+
 export default class Header extends Component {
+  // state에 값이 할당되어있다고 단언
+  public state!: State;
   constructor() {
     super({
       tagName: 'header',
