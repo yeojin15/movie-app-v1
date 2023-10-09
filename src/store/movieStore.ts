@@ -75,7 +75,7 @@ export const searchMovies = async (page: number) => {
         page,
       }),
     });
-    console.log(res, '1123123123');
+
     const { Search, totalResults, Response, Error } = await res.json();
     if (Response === 'True') {
       store.state.movies = [...store.state.movies, ...Search];
