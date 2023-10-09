@@ -1,7 +1,14 @@
 import { Component } from '../core/core';
+import { SingleMovie } from '../store/movieStore';
+
+interface Props {
+  [key: string]: unknown;
+  movie: SingleMovie;
+}
 
 export default class MovieItem extends Component {
-  constructor(props) {
+  public props!: Props;
+  constructor(props: Props) {
     super({ props, tagName: 'a' });
   }
   render() {

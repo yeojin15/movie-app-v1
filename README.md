@@ -5,5 +5,4 @@
 - 아이템 상세 페이지
 - About
 
-1. class 형 -> 함수형 리팩토링
-2. JavaScript -> TypeScript 리팩토링
+1. JavaScript -> TypeScript 리팩토링 (branch: typescript)
